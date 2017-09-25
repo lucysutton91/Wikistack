@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 });
 app.use(express.static('public'));
 
-models.db.sync({ force: true })
+models.db.sync()
 .then(function () {
     app.listen(3000, function () {
         console.log('server is listening on port 3000');
